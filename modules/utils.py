@@ -1,7 +1,10 @@
-import base64, json, binascii, traceback, logging, os, gzip
-from modules import exceptions, datatypes
+import base64
+import json
+import binascii
+import traceback
+from modules import exceptions
 from urllib.parse import urlparse
-from flask import make_response, send_from_directory
+from flask import make_response
 
 config = {}
 exception_dict = {
@@ -30,7 +33,7 @@ def load_config(config_path):
       pass
   
   for key in defaults:
-    if not key in config:
+    if key not in config:
       config[key] = defaults[key]
 
   with open(config_file, "w") as f:
@@ -88,12 +91,12 @@ def handle_exception(exception, debug=None):
 
 #process auth header and raise the appropriate exception
 def process_header(request):
-  header = request.headers.get("authorization");
+  header = request.headers.get("authorization")
   
   if header:
     try:
       data = json.loads(base64.b64decode(header))
-    except (json.decoder.JSONDecodeError, binascii.Error) as e: 
+    except (json.decoder.JSONDecodeError, binascii.Error): 
       raise exceptions.BadRequestError("Invaid auth header data.")
       
     if "endpoint" in data and "session" in data:

@@ -1,4 +1,5 @@
-import json, re, time
+import json
+import time
 import lxml.html
 from modules import exceptions
 
@@ -128,7 +129,7 @@ class Table:
     if element[-1].tag == "tbody":
       row = element[-1][0]
     else:
-      row = self.header_element.getnext();
+      row = self.header_element.getnext()
     
     #iterate through rows and parse
     while True:

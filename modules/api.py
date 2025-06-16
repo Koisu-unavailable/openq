@@ -1,5 +1,7 @@
-import requests, json, re, time
-from modules import utils, exceptions, datatypes
+import requests
+import json
+import re
+from modules import exceptions, datatypes
 import lxml.html
 
 q_endpoints = {
@@ -220,7 +222,7 @@ def get_assignments(headers={}, endpoint="", session="", courses_only=False):
     teacher = run_regex(teacher_regex, regex_flags=[re.S])
     
     course_code_regex = r': (\S+)\s+(.+) \((\d+)\)'
-    match = re.match(course_code_regex, table.caption.content);
+    match = re.match(course_code_regex, table.caption.content)
     if match:
       period, course, course_code = match.groups()
       course_code = int(course_code)

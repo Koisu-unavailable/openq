@@ -4,7 +4,6 @@ from PIL import Image
 from modules import api, utils, exceptions, datatypes
 import pathlib
 import base64
-import time
 import io
 import os
 
@@ -61,7 +60,7 @@ def login():
     if "cookie" in headers: del headers["cookie"]
     data = request.json
     
-    if not "username" in data or not "password" in data:
+    if "username" not in data or "password" not in data:
       raise exceptions.BadRequestError("Username or password missing.")
     if data["username"] == "":
       raise exceptions.BadRequestError("Username cannot be empty.")
@@ -86,7 +85,7 @@ def validate_session():
     else:
       return "", 200, {"success": "true"}
       
-  except Exception as e:
+  except Exception:
     if request.method == "GET":
       return utils.generate_response({"success": False})
     else:

@@ -1,0 +1,805 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "datatypes",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "api",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "datatypes",
+        "importPath": "modules",
+        "description": "modules",
+        "isExtraImport": true,
+        "detail": "modules",
+        "documentation": {}
+    },
+    {
+        "label": "lxml.html",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "lxml.html",
+        "description": "lxml.html",
+        "detail": "lxml.html",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "binascii",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "binascii",
+        "description": "binascii",
+        "detail": "binascii",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "make_response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "send_from_directory",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Compress",
+        "importPath": "flask_compress",
+        "description": "flask_compress",
+        "isExtraImport": true,
+        "detail": "flask_compress",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "debug_response",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def debug_response(r):\n  headers = dict(r.headers)\n  try:\n    content = r.json()\n  except json.decoder.JSONDecodeError:\n    content = r.text\n  response = {\n    \"headers\": dict(r.headers),\n    \"content\": content,\n    \"status\": r.status_code",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "extract_session",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def extract_session(cookie):\n  session_regex_1 = r\"ASP\\.NET_SessionId=([^;^ ]+)\"\n  session_regex_2 = r\"LM_Aequitas=([^;^ ]+)\"\n  if cookie == None:\n    raise exceptions.BadGatewayError(\"No cookie returned.\")\n  matches_1 = re.findall(session_regex_1, cookie)\n  if len(matches_1) == 0:\n    raise exceptions.BadGatewayError(\"SessionId not present in resposne.\")\n  matches_2 = re.findall(session_regex_2, cookie)\n  if len(matches_2) == 0:",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "construct_cookie",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def construct_cookie(session):\n  session_split = session.split(\":\")\n  if len(session_split) != 2:\n    raise exceptions.BadRequestError(\"Session malformed.\")\n  return f\"ASP.NET_SessionId={session_split[0]}; LM_Aequitas={session_split[1]}\"\n#returns the session info after login\ndef login(endpoint, username, password, headers={}):\n  url = endpoint + q_endpoints[\"login\"]\n  payload = {\n    \"Pin\": username,",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def login(endpoint, username, password, headers={}):\n  url = endpoint + q_endpoints[\"login\"]\n  payload = {\n    \"Pin\": username,\n    \"Password\": password\n  }\n  timer = datatypes.RequestTimer()\n  r = requests.post(url, data=payload, headers=headers)\n  timer.update_request()\n  data = r.json()",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_students",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def get_students(endpoint=\"\", session=\"\", headers={}):\n  url = endpoint + q_endpoints[\"main_page\"]\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers)\n  timer.update_request()\n  document = lxml.html.document_fromstring(r.text)\n  table_element = document.get_element_by_id(\"stuBannerTable\")\n  filter_func = lambda row: \"sturow\" in row.element.get(\"class\").split()\n  table = datatypes.Table(table_element, filter_func=filter_func)",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "set_current_student",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def set_current_student(q_id, endpoint=\"\", session=\"\", headers={}):\n  url = endpoint + q_endpoints[\"set_student\"].format(q_id=q_id)\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers, allow_redirects=False)\n  timer.update_request()\n  if r.status_code == 302:\n    url2 = endpoint + q_endpoints[\"main_page\"]\n    r2 = requests.get(url2, headers=headers)\n    return datatypes.APIResult(success=True, timer=timer)",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_image",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def get_student_image(student_id=None, endpoint=\"\", session=\"\", headers={}):\n  if student_id:\n    url = endpoint + q_endpoints[\"student_image\"].format(student_id=student_id)\n  else:\n    url = endpoint + q_endpoints[\"student_image_alt\"]\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers)\n  timer.update_request()\n  if r.status_code == 200 and r.headers.get(\"content-type\"):",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_assignments",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def get_assignments(headers={}, endpoint=\"\", session=\"\", courses_only=False):\n  url = endpoint + q_endpoints[\"assignments\"]\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers)\n  timer.update_request()\n  if r.status_code != 200:\n    raise exceptions.BadGatewayError(f\"Could not fetch assignments. Endpoint returned status code {r.status_code}.\")\n  #parse html\n  document = lxml.html.document_fromstring(r.text)",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_demographics",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def get_demographics(endpoint=\"\", session=\"\", headers={}):\n  url = endpoint + q_endpoints[\"demographics\"]\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers)\n  timer.update_request()\n  #parse document and table\n  document = lxml.html.document_fromstring(r.text)\n  table_element = document.xpath(\"//table[@aria-label='Demographics']\")[0]\n  table_data = {}",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "get_attendance",
+        "kind": 2,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "def get_attendance(endpoint=\"\", session=\"\", headers={}):\n  url = endpoint + q_endpoints[\"attendance\"]\n  headers[\"cookie\"] = construct_cookie(session)\n  timer = datatypes.RequestTimer()\n  r = requests.get(url, headers=headers)\n  timer.update_request()\n  #parse document and tables\n  document = lxml.html.document_fromstring(r.text)\n  try:\n    summary_reason_element = document.get_element_by_id(\"SP-AttendanceByReason\")",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "q_endpoints",
+        "kind": 5,
+        "importPath": "modules.api",
+        "description": "modules.api",
+        "peekOfCode": "q_endpoints = {\n  \"login\": \"/Home/Login\",\n  \"assignments\": \"/Home/LoadProfileData/Assignments\",\n  \"main_page\": \"/Home/PortalMainPage\",\n  \"set_student\": \"/StudentBanner/SetStudentBanner/{q_id}\",\n  \"student_image\": \"/StudentBanner/ShowImage/{student_id}\",\n  \"student_image_alt\": \"/Home/ShowPhoto\",\n  \"demographics\": \"/Home/LoadProfileData/Demographics\",\n  \"attendance\" : \"/Home/LoadProfileData/Attendance\"\n}",
+        "detail": "modules.api",
+        "documentation": {}
+    },
+    {
+        "label": "RequestTimer",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class RequestTimer:\n  def __init__(self):\n    self.start = time.time()*1000\n    self.request = self.request_time = self.finish = 0\n    self.processing_time = self.total_time = 0\n  def update_request(self):\n    self.request = time.time()*1000\n    self.request_time = self.request - self.start\n    self.total_time = self.request_time\n  def update_finished(self):",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "APIResult",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class APIResult:\n  def __init__(self, **kwargs):\n    for key in kwargs:\n      setattr(self, key, kwargs[key])\n  def encode_as_dict(self):\n    return vars(self)\n#classes for tables\nclass TableColumn:\n  def __init__(self, id, title):\n    self.id = id",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "TableColumn",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class TableColumn:\n  def __init__(self, id, title):\n    self.id = id\n    self.title = title\nclass TableCaption:\n  def __init__(self, id, title, content):\n    self.id = id\n    self.title = title\n    self.content = content\nclass TableHeader:",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "TableCaption",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class TableCaption:\n  def __init__(self, id, title, content):\n    self.id = id\n    self.title = title\n    self.content = content\nclass TableHeader:\n  def __init__(self, element):\n    self.columns = []\n    self.ids = []\n    if element[0].tag == \"tr\":",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "TableHeader",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class TableHeader:\n  def __init__(self, element):\n    self.columns = []\n    self.ids = []\n    if element[0].tag == \"tr\":\n      element = element[-1]\n    self.element = element\n    for i in range(0, len(element)):\n      child = element[i]\n      if child.tag == \"th\":",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "TableRow",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class TableRow:\n  def __init__(self, header, element):\n    self.header = header\n    self.element = element\n    self.id = element.get(\"id\")\n    self.data = {}\n    self.data_list = []\n    for i in range(0, len(header.ids)):\n      cell = element[i]\n      cell_id = header.ids[i]",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Table",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Table:\n  def __init__(self, element, filter_func=None):\n    self.element = element\n    self.rows = []\n    self.caption = None\n    self.header_element = None\n    #find headers\n    if element[0].tag in [\"thead\", \"tr\"]:\n      self.header = TableHeader(element[0])\n      self.header_element = element[0]",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "CustomJSONEncoder",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class CustomJSONEncoder(json.JSONEncoder):\n  def default(self, obj):\n    if hasattr(obj, \"encode_as_dict\"):\n      return obj.encode_as_dict()\n    else:\n      return json.JSONEncoder.default(self, obj)\n#generic class to represnt data\nclass DataClass:\n  attributes = {}\n  encode_nonetype = False",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "DataClass",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class DataClass:\n  attributes = {}\n  encode_nonetype = False\n  def __init__(self, attributes={}, table_data={}):\n    self.attributes_inverted = {}\n    for key, value in self.attributes.items():\n      self.attributes_inverted[value] = key\n      if key in attributes:\n        setattr(self, key, attributes[key])\n      else:",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Student",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Student(DataClass):\n  attributes = {\n    \"id\": None,\n    \"student_id\": None,\n    \"name\": \"StudentName\",\n    \"grade\": \"Grade\",\n    \"school\": \"SchoolName\",\n    \"year\": \"SchoolYear\",\n    \"birth_date\": \"BirthDate\",\n    \"advisor\": \"Advisor\",",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Course",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Course(DataClass):\n  attributes = {\n    \"classroom\": None,\n    \"teacher\": None,\n    \"entry\": None,\n    \"exit\": None,\n    \"course\": None,\n    \"course_code\": None,\n    \"term\": None,\n    \"period\": None,",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Assignment",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Assignment(DataClass):\n  attributes = {\n    \"title\": \"assignment\",\n    \"comments\": \"comments\",\n    \"assigned\": \"dateassigned\",\n    \"due\": \"datedue\",\n    \"detail\": \"detail\",\n    \"extra_credit\": \"extracredit\",\n    \"graded\": \"notyetgraded\",\n    \"score_percent\": \"pctscore\",",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Attendance",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Attendance(DataClass):\n  attributes = {\n    \"summary_classes\": None,\n    \"summary_reason\": None,\n    \"attendance_items\": None\n  }\nclass AttendanceReasons(DataClass):\n  attributes = {\n    \"present\": \"Present\",\n    \"absent\": \"Absent\",",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceReasons",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class AttendanceReasons(DataClass):\n  attributes = {\n    \"present\": \"Present\",\n    \"absent\": \"Absent\",\n    \"sick\": \"Illness or Sickness Only\",\n    \"field_trip\": \"Field Trip\",\n    \"tardy\": \"Unex Tardy Less than 30 min\"\n  }\nclass AttendanceItem(DataClass):\n  attributes = {",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "AttendanceItem",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class AttendanceItem(DataClass):\n  attributes = {\n    \"reason\": None,\n    \"course\": None,\n    \"course_code\": None,\n    \"date\": \"date\",\n    \"period\": \"period\",\n    \"teacher\": \"teacher\"\n  }\n#class for demographics data",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "Demographics",
+        "kind": 6,
+        "importPath": "modules.datatypes",
+        "description": "modules.datatypes",
+        "peekOfCode": "class Demographics(DataClass):\n  encode_nonetype = True\n  attributes = {\n    \"name\": \"name\",\n    \"student_id\": \"ident\",\n    \"nickname\": \"nickname\",\n    \"state_id\": \"stateid\",\n    \"birth_date\": \"birthdate\",\n    \"school\": \"schname\",\n    \"age\": \"age\",",
+        "detail": "modules.datatypes",
+        "documentation": {}
+    },
+    {
+        "label": "UnauthorizedError",
+        "kind": 6,
+        "importPath": "modules.exceptions",
+        "description": "modules.exceptions",
+        "peekOfCode": "class UnauthorizedError(Exception):\n  pass\nclass ForbiddenError(Exception):\n  pass\nclass BadRequestError(Exception):\n  pass\nclass BadGatewayError(Exception):\n  pass",
+        "detail": "modules.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ForbiddenError",
+        "kind": 6,
+        "importPath": "modules.exceptions",
+        "description": "modules.exceptions",
+        "peekOfCode": "class ForbiddenError(Exception):\n  pass\nclass BadRequestError(Exception):\n  pass\nclass BadGatewayError(Exception):\n  pass",
+        "detail": "modules.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "BadRequestError",
+        "kind": 6,
+        "importPath": "modules.exceptions",
+        "description": "modules.exceptions",
+        "peekOfCode": "class BadRequestError(Exception):\n  pass\nclass BadGatewayError(Exception):\n  pass",
+        "detail": "modules.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "BadGatewayError",
+        "kind": 6,
+        "importPath": "modules.exceptions",
+        "description": "modules.exceptions",
+        "peekOfCode": "class BadGatewayError(Exception):\n  pass",
+        "detail": "modules.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "load_config",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def load_config(config_path):\n  global config\n  defaults_file = config_path / \"defaults.json\"\n  config_file = config_path / \"config.json\"\n  overwrite_config = False\n  with open(defaults_file) as f:\n    defaults = json.loads(f.read())\n  if defaults_file.exists() and config_file.exists():\n    try:\n      with open(config_file) as f:",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "validate_url",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def validate_url(url):\n  result = urlparse(url)\n  return all([result.scheme, result.netloc, result.path])\n#generate a flask response from json data\ndef generate_response(data, session=None, status=200, headers={}):\n  response_data = {\n    \"status\": status,\n    \"data\": data\n  }\n  if session != None:",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_response",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def generate_response(data, session=None, status=200, headers={}):\n  response_data = {\n    \"status\": status,\n    \"data\": data\n  }\n  if session != None:\n    response_data[\"session\"] = session\n  response = make_response(response_data)\n  response.status_code = status\n  for key in headers:",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "handle_exception",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def handle_exception(exception, debug=None):\n  if debug == None:\n    debug = config.get(\"debug\")\n  if isinstance(exception, Exception):\n    message = str(exception)\n    exception_type = exception.__class__.__name__\n    if exception_type in exception_dict:\n      status = exception_dict[exception_type]\n    else:\n      status = 500",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "process_header",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def process_header(request):\n  header = request.headers.get(\"authorization\")\n  if header:\n    try:\n      data = json.loads(base64.b64decode(header))\n    except (json.decoder.JSONDecodeError, binascii.Error): \n      raise exceptions.BadRequestError(\"Invaid auth header data.\")\n    if \"endpoint\" in data and \"session\" in data:\n      returned = {\n        \"endpoint\": data[\"endpoint\"],",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "validate_headers",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def validate_headers(request):\n  auth = process_header(request)\n  if not validate_url(auth[\"endpoint\"]):\n    raise exceptions.BadRequestError(\"Endpoint needs to be a valid URL.\")\n  return auth\n#extract headers and auth data from a flask request\ndef extract_data(request):\n  kwargs = validate_headers(request)\n  kwargs[\"headers\"] = {}\n  if request.headers.get(\"user-agent\"):",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "extract_data",
+        "kind": 2,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "def extract_data(request):\n  kwargs = validate_headers(request)\n  kwargs[\"headers\"] = {}\n  if request.headers.get(\"user-agent\"):\n    kwargs[\"headers\"][\"user-agent\"] = request.headers[\"user-agent\"]\n  return kwargs",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "config = {}\nexception_dict = {\n  \"BadRequestError\": 400,\n  \"UnauthorizedError\": 401,\n  \"ForbiddenError\": 403,\n  \"BadGatewayError\": 502\n}\n#load config files\ndef load_config(config_path):\n  global config",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "exception_dict",
+        "kind": 5,
+        "importPath": "modules.utils",
+        "description": "modules.utils",
+        "peekOfCode": "exception_dict = {\n  \"BadRequestError\": 400,\n  \"UnauthorizedError\": 401,\n  \"ForbiddenError\": 403,\n  \"BadGatewayError\": 502\n}\n#load config files\ndef load_config(config_path):\n  global config\n  defaults_file = config_path / \"defaults.json\"",
+        "detail": "modules.utils",
+        "documentation": {}
+    },
+    {
+        "label": "hanle_404",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def hanle_404(e):\n  return render_template(\"404.html\"), 404\n#===== api routes =====\ndef generic_api_route(request, api_method, *args, **kwargs):\n  try:\n    default_kwargs = utils.extract_data(request)\n    result = api_method(*args, **default_kwargs, **kwargs)\n    return utils.generate_response(result)\n  except Exception as e:\n    return utils.handle_exception(e)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "generic_api_route",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def generic_api_route(request, api_method, *args, **kwargs):\n  try:\n    default_kwargs = utils.extract_data(request)\n    result = api_method(*args, **default_kwargs, **kwargs)\n    return utils.generate_response(result)\n  except Exception as e:\n    return utils.handle_exception(e)\n@app.route(\"/api/default_endpoint\", methods=[\"GET\"])\ndef get_default_endpoint():\n  try:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_default_endpoint",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_default_endpoint():\n  try:\n    response = {\"endpoint\": utils.config[\"default_endpoint\"]}\n    return utils.generate_response(response)\n  except Exception as e:\n    return utils.handle_exception(e)\n@app.route(\"/api/login\", methods=[\"POST\"])\ndef login():\n  try:\n    auth = utils.extract_data(request)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def login():\n  try:\n    auth = utils.extract_data(request)\n    headers = auth.pop(\"headers\")\n    if \"cookie\" in headers: del headers[\"cookie\"]\n    data = request.json\n    if \"username\" not in data or \"password\" not in data:\n      raise exceptions.BadRequestError(\"Username or password missing.\")\n    if data[\"username\"] == \"\":\n      raise exceptions.BadRequestError(\"Username cannot be empty.\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "validate_session",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def validate_session():\n  try:\n    kwargs = utils.extract_data(request)\n    endpoint = auth[\"endpoint\"]\n    api.get_students(**kwargs, headers=headers)\n    if request.method == \"GET\":\n      return utils.generate_response({\"success\": True})\n    else:\n      return \"\", 200, {\"success\": \"true\"}\n  except Exception:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_students",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_students():\n  try:\n    default_kwargs = utils.extract_data(request)\n    result = api.get_students(**default_kwargs)\n    if not result.selected:\n      api.set_current_student(**default_kwargs, q_id=result.students[0].id)\n    return utils.generate_response(result)\n  except Exception as e:\n    return utils.handle_exception(e)\n@app.route(\"/api/set_student/<student_id>\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "set_student",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def set_student(student_id):\n  return generic_api_route(request, api.set_current_student, q_id=student_id)\n@app.route(\"/api/student_image\")\n@app.route(\"/api/student_image/<student_id>\")\ndef get_student_image(student_id=None):\n  try:\n    default_kwargs = utils.extract_data(request)\n    #todo: don't use base64\n    result = api.get_student_image(**default_kwargs, student_id=student_id)\n    #resize and compress image if applicable",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_student_image",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_student_image(student_id=None):\n  try:\n    default_kwargs = utils.extract_data(request)\n    #todo: don't use base64\n    result = api.get_student_image(**default_kwargs, student_id=student_id)\n    #resize and compress image if applicable\n    resized_size = request.args.get(\"size\")\n    if resized_size:\n      resized_size = int(resized_size)\n      img = Image.open(io.BytesIO(result.data))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_asssignments",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_asssignments():\n  return generic_api_route(request, api.get_assignments)\n@app.route(\"/api/courses\")\ndef get_courses():\n  return generic_api_route(request, api.get_assignments, courses_only=True)\n@app.route(\"/api/demographics\")\ndef get_demographics():\n  return generic_api_route(request, api.get_demographics)\n@app.route(\"/api/attendance\")\ndef get_attendance():",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_courses",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_courses():\n  return generic_api_route(request, api.get_assignments, courses_only=True)\n@app.route(\"/api/demographics\")\ndef get_demographics():\n  return generic_api_route(request, api.get_demographics)\n@app.route(\"/api/attendance\")\ndef get_attendance():\n  return generic_api_route(request, api.get_attendance)\n#===== user-visible pages =====\n@app.route(\"/\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_demographics",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_demographics():\n  return generic_api_route(request, api.get_demographics)\n@app.route(\"/api/attendance\")\ndef get_attendance():\n  return generic_api_route(request, api.get_attendance)\n#===== user-visible pages =====\n@app.route(\"/\")\ndef homepage():\n  return render_template(\"login.html\")\n@app.route(\"/about\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_attendance",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_attendance():\n  return generic_api_route(request, api.get_attendance)\n#===== user-visible pages =====\n@app.route(\"/\")\ndef homepage():\n  return render_template(\"login.html\")\n@app.route(\"/about\")\ndef about():\n  return render_template(\"about.html\")\n@app.route(\"/assignments\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "homepage",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def homepage():\n  return render_template(\"login.html\")\n@app.route(\"/about\")\ndef about():\n  return render_template(\"about.html\")\n@app.route(\"/assignments\")\ndef assignments():\n  return render_template(\"app.html\", page=\"assignments\")\n#not implemented yet\n@app.route(\"/demographics\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def about():\n  return render_template(\"about.html\")\n@app.route(\"/assignments\")\ndef assignments():\n  return render_template(\"app.html\", page=\"assignments\")\n#not implemented yet\n@app.route(\"/demographics\")\ndef demographics():\n  return render_template(\"app.html\", page=\"demographics\")\n@app.route(\"/attendance\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "assignments",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def assignments():\n  return render_template(\"app.html\", page=\"assignments\")\n#not implemented yet\n@app.route(\"/demographics\")\ndef demographics():\n  return render_template(\"app.html\", page=\"demographics\")\n@app.route(\"/attendance\")\ndef attendance():\n  return render_template(\"app.html\", page=\"attendance\")\n#===== assets and static files =====",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "demographics",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def demographics():\n  return render_template(\"app.html\", page=\"demographics\")\n@app.route(\"/attendance\")\ndef attendance():\n  return render_template(\"app.html\", page=\"attendance\")\n#===== assets and static files =====\n@app.route(\"/js/<path:path>\")\ndef js(path):\n  return send_from_directory(\"js\", path)\n@app.route(\"/assets/<path:path>\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "attendance",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def attendance():\n  return render_template(\"app.html\", page=\"attendance\")\n#===== assets and static files =====\n@app.route(\"/js/<path:path>\")\ndef js(path):\n  return send_from_directory(\"js\", path)\n@app.route(\"/assets/<path:path>\")\ndef assets(path):\n  return send_from_directory(\"assets\", path)\n@app.route(\"/css/<path:path>\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "js",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def js(path):\n  return send_from_directory(\"js\", path)\n@app.route(\"/assets/<path:path>\")\ndef assets(path):\n  return send_from_directory(\"assets\", path)\n@app.route(\"/css/<path:path>\")\ndef css(path):\n  return send_from_directory(\"css\", path)\n#===== start server =====\nif __name__ == \"__main__\":",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "assets",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def assets(path):\n  return send_from_directory(\"assets\", path)\n@app.route(\"/css/<path:path>\")\ndef css(path):\n  return send_from_directory(\"css\", path)\n#===== start server =====\nif __name__ == \"__main__\":\n  #regenerate tailwind dist.css file\n  print(\"Regenerating tailwind css file...\")\n  base_path = os.path.dirname(os.path.abspath(__file__))",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "css",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def css(path):\n  return send_from_directory(\"css\", path)\n#===== start server =====\nif __name__ == \"__main__\":\n  #regenerate tailwind dist.css file\n  print(\"Regenerating tailwind css file...\")\n  base_path = os.path.dirname(os.path.abspath(__file__))\n  cmd = f\"tailwindcss -i {base_path}/css/main.css -o {base_path}/css/dist.css -m\"\n  os.system(cmd)\n  host = utils.config[\"server_address\"]",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "base_path",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "base_path = pathlib.Path(__file__).parent.resolve()\nconfig_path = base_path / \"config\"\nutils.load_config(config_path)\nif utils.config[\"debug\"]:\n  print(\"Debug mode enabled. Stacktraces will be included in error responses.\")\nif utils.config[\"default_endpoint\"] == None:\n  raise Exception(\"Please set the default Q endpoint in config.json.\")\n#===== create flask instance =====\napp = Flask(__name__)\napp.json_encoder = datatypes.CustomJSONEncoder",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "config_path",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "config_path = base_path / \"config\"\nutils.load_config(config_path)\nif utils.config[\"debug\"]:\n  print(\"Debug mode enabled. Stacktraces will be included in error responses.\")\nif utils.config[\"default_endpoint\"] == None:\n  raise Exception(\"Please set the default Q endpoint in config.json.\")\n#===== create flask instance =====\napp = Flask(__name__)\napp.json_encoder = datatypes.CustomJSONEncoder\nif utils.config[\"gzip_level\"] != False:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = Flask(__name__)\napp.json_encoder = datatypes.CustomJSONEncoder\nif utils.config[\"gzip_level\"] != False:\n  Compress(app)\n  app.config[\"COMPRESS_ALGORITHM\"] = \"gzip\"\n  app.config[\"COMPRESS_LEVEL\"] = utils.config[\"gzip_level\"]\n  app.config[\"COMPRESS_MIMETYPES\"].append(\"image/svg+xml\")\n#===== error pages =====\n@app.errorhandler(404)\ndef hanle_404(e):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app.json_encoder",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app.json_encoder = datatypes.CustomJSONEncoder\nif utils.config[\"gzip_level\"] != False:\n  Compress(app)\n  app.config[\"COMPRESS_ALGORITHM\"] = \"gzip\"\n  app.config[\"COMPRESS_LEVEL\"] = utils.config[\"gzip_level\"]\n  app.config[\"COMPRESS_MIMETYPES\"].append(\"image/svg+xml\")\n#===== error pages =====\n@app.errorhandler(404)\ndef hanle_404(e):\n  return render_template(\"404.html\"), 404",
+        "detail": "main",
+        "documentation": {}
+    }
+]
