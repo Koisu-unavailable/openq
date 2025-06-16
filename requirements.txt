@@ -3,3 +3,4 @@ pytailwindcss
 lxml
 flask-compress
 pillow
+requests
